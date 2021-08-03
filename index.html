@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title>
+            Emotions to Emoji
+        </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+    <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+
+    <center>
+        <h2 style="background-color: aquamarine; height: 140px; width: 400px; font-size: 30px;" class="btn btn-default title"> 
+            Emotion Identifier 
+            <hr>
+            <span style="font-size: 40px;">&#128522;</span> 
+            <span style="font-size: 40px;">&#128512;</span> 
+            <span style="font-size: 40px;">&#128532;</span> 
+            <span style="font-size: 40px;">&#128546;</span> 
+            <span style="font-size: 40px;">&#128545;</span> 
+            <span style="font-size: 40px;">&#128548;</span>
+        </h2>
+        <hr>
+        <div class="col-md-4">
+             <label>Webcam View : </label>
+             <div id="webcam" style="border: 5px solid black; width: 300px; height: 300px;"></div> 
+             <br>
+             <button style="background-image:url('camera.png'); border:2px solid black; border-radius: 50%; width: 100px; height: 100px" onclick="take_snapshot()"></button>
+        </div>
+        <div class="col-md-4">
+            <Label>Prediction 1 :</Label> <p id="predict_1"></p> <img src="" id="emoji_1">
+            <br>
+            <Label>Prediction 2 :</Label> <p id="predict_2"></p> <img src="" id="emoji_2">
+        </div>
+        <div class="col-md-4">
+             <label>Snapshot View : </label>
+             <div id="snapshot" style="border: 5px solid black; width: 300px; height: 300px;"></div> 
+             <br>
+             <button onclick="identify()" style="background-color:darkturquoise;"> Identify Emotion </button>
+        </div>
+    </center>
+
+    <div id="webcam"></div> <div id="snapshot"></div>
+        
+        <script src="main.js"></script>
+    </body>
+</html>
